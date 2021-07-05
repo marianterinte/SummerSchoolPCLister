@@ -2,7 +2,6 @@
 
 namespace PCLister
 {
-	//V2.
 	class Program
 	{
 		static void Main(string[] args)
@@ -10,11 +9,8 @@ namespace PCLister
 			Console.WriteLine("PC Type: ");
 			var pcType = Console.ReadLine();
 
-			Console.WriteLine("Processor: ");
-			var processorMake = Console.ReadLine();
-
 			Console.WriteLine("Display: ");
-			var format = Console.ReadLine();
+			var display = Console.ReadLine();
 
 			var pc = new PC("Asus", "AMD", "4Ghz", "16GB", "3600Mhz");
 
@@ -33,9 +29,6 @@ namespace PCLister
 			// Processor Freq: 4Ghz
 			// Ram Size: 16GB
 			// Ram Freq: 3600 Mhz
-
-
-
 
 		}
 	}
