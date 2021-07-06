@@ -64,7 +64,7 @@ namespace PCLister
 
 				case printSpecsFormat.Id:
 					string unit = ramFrequency.Substring(ramFrequency.Length - 3);
-					float value = float.Parse(ramFrequency.Substring(0, ramFrequency.Length - ramFrequency.IndexOf(unit) + 1));
+					float value = float.Parse(ramFrequency.Substring(0,ramFrequency.IndexOf(unit)));
 					if (unit == "Mhz")
 					{ 
 						value /= 1000; 

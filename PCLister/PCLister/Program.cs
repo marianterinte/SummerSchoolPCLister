@@ -1,18 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PCLister
 {
 	//V2.
 	class Program
 	{
-		static void initStock()
+		static List<PC> initStock()
         {
-
-        }
+			List<PC> pcStock = new List<PC>();
+			string line;
+			string[] component;
+			System.IO.StreamReader file = new System.IO.StreamReader(@"stock.txt");
+			while((line = file.ReadLine()) != null)
+            {
+				component = line.Split(' ');
+				pcStock.Add(new PC(component[0], component[1], component[2], component[3], component[4]));
+            }
+			return pcStock;
+		}
 		static void Main(string[] args)
 		{
-			initStock();
-
+			List<PC> pcStock = new List<PC>();
+			pcStock = initStock();
 			Console.WriteLine("PC Type: ");
 			var pcType = Console.ReadLine();
 
