@@ -6,41 +6,38 @@ namespace PCLister
 {
 	public class PC
 	{
-		public string motherboardMake;
-        public string motherboardModel;
-        public string motherboardUsbPort;
-        public string processorMake;
-        public string processorModel;
-		public string processorFrequency;
-        public string processorCores;
-        public string ramSize;
-		public string ramFrequency;
-		public string graphicCardMake;
-        public string graphicCardModel;
-        public string graphicCardSyze;
-		public string graphicCardFrequency;
-		public string memoryHDD; 
-		public string motherBoardRamSlots;
-		public string audioCard;
+		private string motherboardMake;
+		private string motherboardModel;
+		private string motherboardUsbPort;
+		private string processorMake;
+		private string processorModel;
+		private string processorFrequency;
+		private string processorCores;
+		private string ramSize;
+		private string ramFrequency;
+		private string graphicCardMake;
+		private string graphicCardModel;
+		private string graphicCardSyze;
+		private string graphicCardFrequency;
+		private string memoryHDD;
+		private string motherBoardRamSlots;
+		private string audioCard;
 
-        public PC(string motherboardMake, string motherboardModel, string motherboardUsbPort, string processorMake, string processorModel, string processorFrequency, string processorCores, string ramSize, string ramFrequency, string graphicCardMake, string graphicCardModel, string graphicCardSyze, string graphicCardFrequency, string memoryHDD, string motherBoardRamSlots, string audioCard)
-        {
-            this.motherboardMake = motherboardMake;
-            this.motherboardModel = motherboardModel;
-            this.motherboardUsbPort = motherboardUsbPort;
-            this.processorMake = processorMake;
-            this.processorModel = processorModel;
-            this.processorFrequency = processorFrequency;
-            this.processorCores = processorCores;
-            this.ramSize = ramSize;
-            this.ramFrequency = ramFrequency;
-            this.graphicCardMake = graphicCardMake;
-            this.graphicCardModel = graphicCardModel;
-            this.graphicCardSyze = graphicCardSyze;
-            this.graphicCardFrequency = graphicCardFrequency;
-            this.memoryHDD = memoryHDD;
-            this.motherBoardRamSlots = motherBoardRamSlots;
-            this.audioCard = audioCard;
-        }
-    }
+		public string MotherboardMake { get => motherboardMake; set => motherboardMake = value; }
+		public string MotherboardModel { get => motherboardModel; set => motherboardModel = value; }
+		public string MotherboardUsbPort { get => motherboardUsbPort; set => motherboardUsbPort = value; }
+		public string ProcessorMake { get => processorMake; set => processorMake = value; }
+		public string ProcessorModel { get => processorModel; set => processorModel = value; }
+		public string ProcessorFrequency { get => processorFrequency; set => processorFrequency = value; }
+		public string ProcessorCores { get => processorCores; set => processorCores = value; }
+		public string RamSize { get => ramSize; set => ramSize = value; }
+		public string RamFrequency { get => ramFrequency; set => ramFrequency = value; }
+		public string GraphicCardMake { get => graphicCardMake; set => graphicCardMake = value; }
+		public string GraphicCardModel { get => graphicCardModel; set => graphicCardModel = value; }
+		public string GraphicCardSyze { get => graphicCardSyze; set => graphicCardSyze = value; }
+		public string GraphicCardFrequency { get => graphicCardFrequency; set => graphicCardFrequency = value; }
+		public string MemoryHDD { get => memoryHDD; set => memoryHDD = value; }
+		public string MotherBoardRamSlots { get => motherBoardRamSlots; set => motherBoardRamSlots = value; }
+		public string AudioCard { get => audioCard; set => audioCard = value; }
+	}
 }
