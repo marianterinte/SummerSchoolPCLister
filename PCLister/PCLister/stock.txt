@@ -1,4 +1,5 @@
 Asus AMD 5Ghz 16GB 3400Mhz High-End
 Intel AMD 3Ghz 8GB 3.2Ghz Basic
-MSI Intel 4.5Ghz 4GB 3Ghz Performant
-Asus Intel 3.2Ghz 8GB 2933Mhz Budget
+MSI Intel 4.5Ghz 16GB 3Ghz Performant
+Asus Intel 3.2Ghz 4GB 2933Mhz Budget
+Asus Intel 3Ghz 2GB 2433Mhz Budget

@@ -10,26 +10,38 @@ namespace PCLister
 	public class PC
 	{
 		public enum printSpecsFormat
-        {
+		{
 			Null,
 			Min,
 			Full,
 			Id
-        }
+		}
 
 		public string motherboardMake;
 		public string processorMake;
 		public string processorFrequency;
 		public string ramSize;
 		public string ramFrequency;
+		public string pcType;
 
-		public PC(string motherboardMake, string processorMake, string processorFrequency, string ramSize, string ramFrequency)
+		public string getProcessorMake()
+		{
+			return processorMake;
+		}
+
+		public string getPcType()
+        {
+			return pcType;
+        }
+
+		public PC(string motherboardMake, string processorMake, string processorFrequency, string ramSize, string ramFrequency, string pcType)
 		{
 			this.motherboardMake = motherboardMake;
 			this.processorMake = processorMake;
 			this.processorFrequency = processorFrequency;
 			this.ramSize = ramSize;
 			this.ramFrequency = ramFrequency;
+			this.pcType = pcType;
 		}
 
 		static public printSpecsFormat convertInput(string input)
@@ -59,7 +71,13 @@ namespace PCLister
 					break;
 
 				case printSpecsFormat.Full:
-					Console.WriteLine(JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented));
+					//Console.WriteLine("Motherboard: " + motherboardMake);
+					//Console.WriteLine("Processor: " + processorMake);
+					//Console.WriteLine("Processor Freq: " + processorFrequency);
+					//Console.WriteLine("Ram Size: " + ramSize);
+					//Console.WriteLine("Ram Frequency: " + ramFrequency);
+					//Console.WriteLine("PC Type: " + pcType);
+					Console.WriteLine(JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented)); //If fields are public
 					break;
 
 				case printSpecsFormat.Id:
@@ -73,7 +91,7 @@ namespace PCLister
 					break;
 
 				default:
-					Console.WriteLine("Error");
+					Console.WriteLine("Printing info failed");
 					break;
             }
         }
