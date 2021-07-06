@@ -11,7 +11,7 @@ namespace PCLister
 			List<PC> pcStock = new List<PC>();
 			string line;
 			string[] component;
-			System.IO.StreamReader file = new System.IO.StreamReader(@"stock.txt");
+			System.IO.StreamReader file = new System.IO.StreamReader(@"../../../stock.txt");
 			while((line = file.ReadLine()) != null)
             {
 				component = line.Split(' ');
