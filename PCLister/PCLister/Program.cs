@@ -5,8 +5,14 @@ namespace PCLister
 	//V2.
 	class Program
 	{
+		static void initStock()
+        {
+
+        }
 		static void Main(string[] args)
 		{
+			initStock();
+
 			Console.WriteLine("PC Type: ");
 			var pcType = Console.ReadLine();
 
@@ -18,11 +24,7 @@ namespace PCLister
 
 			var pc = new PC("Asus", "AMD", "4Ghz", "16GB", "3600Mhz");
 
-			Console.WriteLine("Motherboard: " + pc.motherboardMake);
-			Console.WriteLine("Processor: " + pc.processorMake);
-			Console.WriteLine("Processor Freq: " + pc.processorFrequency);
-			Console.WriteLine("Ram Size: " + pc.ramSize);
-			Console.WriteLine("Ram Frequency: " + pc.ramFrequency);
+			pc.printSpecs(PC.convertInput(format));
 
 			//basic
 			//AMD
