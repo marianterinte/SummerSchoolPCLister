@@ -13,7 +13,8 @@ namespace PCLister
 
 			var format = Console.ReadLine();
 			PCBuilder pcBuilder;
-
+		
+			
 			switch (pcType)
 			{
 				case "basic":
@@ -43,8 +44,28 @@ namespace PCLister
 			}
 
 			pcBuilder.Build();
-			PC pc = pcBuilder.GetPC();
+			PC pc = pcBuilder.GetPC()
 
+			class budget : pcType
+		
+			{
+				Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + "\nProcessor: " + pc.ProcessorMake + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nRam Size: " + pc.RamSize + "\nGraphic Card :" + pc.GraphicCardModel + "\nHDD:" + pc.MemoryHDD);
+			}
+		class basic : pcType
+
+		{
+			Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + "\nProcessor: " + pc.ProcessorMake + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nRam Size: " + pc.RamSize + "\nGraphic Card :" + pc.GraphicCardModel + "\nHDD:" + pc.MemoryHDD);
+			}
+		class performant : pcType
+
+		{
+			Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + "\nProcessor: " + pc.ProcessorMake + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nRam Size: " + pc.RamSize + "\nGraphic Card :" + pc.GraphicCardModel + "\nHDD:" + pc.MemoryHDD);
+			}
+		class high-end : pcType
+
+		{
+			Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + "\nProcessor: " + pc.ProcessorMake + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nRam Size: " + pc.RamSize + "\nGraphic Card :" + pc.GraphicCardModel + "\nHDD:" + pc.MemoryHDD);
+			}
 
 			switch (format)
 			{
