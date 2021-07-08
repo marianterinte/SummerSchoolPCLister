@@ -16,11 +16,20 @@ namespace PCLister
 
 			SetupMotherboard();
 			SetupMemory();
+			SetupProcessor();
+			SetupStorage();
+			SetupGpu();
+			SetupAudioCard();
 		}
 
 		protected abstract void SetupMemory();
 
 		protected abstract void SetupMotherboard();
+
+		protected abstract void SetupGpu();
+		protected abstract void SetupProcessor();
+		protected abstract void SetupStorage();
+		protected abstract void SetupAudioCard();
 
 	}
 }
