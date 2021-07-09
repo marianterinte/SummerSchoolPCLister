@@ -19,12 +19,10 @@ namespace PCLister
 
 		protected override void SetupMemory()
 		{
-			throw new NotImplementedException();
 		}
 
 		protected override void SetupMotherboard()
 		{
-			throw new NotImplementedException();
 		}
 	}
 }

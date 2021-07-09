@@ -10,62 +10,14 @@ namespace PCLister
 			var pcType = Console.ReadLine();
 
 			Console.WriteLine("Display (min/full/id): ");
-
 			var format = Console.ReadLine();
-			PCBuilder pcBuilder;
 
-			switch (pcType)
-			{
-				case "basic":
-					{
-						pcBuilder = new BasicPCBuilder();
-						break;
-					}
-
-				case "performant":
-					{
-						pcBuilder = new PerformantPCBuilder();
-						break;
-					}
-
-				case "high-end":
-					{
-						pcBuilder = new HighEndPCBuilder();
-						break;
-					}
-
-				default:
-					{
-						pcBuilder = new BudgetPCBuilder();
-						break;
-
-					}
-			}
-
+			var pcBuilderFactory = new PCBuilderFactory();
+			PCBuilder pcBuilder = pcBuilderFactory.Get(pcType);
+			 
 			pcBuilder.Build();
 			PC pc = pcBuilder.GetPC();
-
-			switch (format)
-			{
-				case "min":
-					Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + "\nProcessor: " + pc.ProcessorMake + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nRam Size: " + pc.RamSize + "\nGraphic Card :" + pc.GraphicCardModel + "\nHDD:" + pc.MemoryHDD);
-					break;
-
-				case "full":
-
-				case "budget":
-					Console.WriteLine("PC components:" + "\nMotherboard: " + pc.MotherboardMake + " " + pc.MotherboardModel + " " + ", Ram slots " + pc.MotherBoardRamSlots + ", USB Ports: " + pc.MotherboardUsbPort + "\nProcessor: " + pc.ProcessorMake + "" + pc.ProcessorModel + "\nProcessor Freq: " + pc.ProcessorFrequency + "\nProcessor cores: " + pc.ProcessorCores + "\nRam: " + pc.RamSize + " " + pc.RamFrequency + "\nGraphic Card :" + pc.GraphicCardMake + " " + pc.GraphicCardModel + " " + pc.GraphicCardSyze + " " + pc.GraphicCardFrequency + "\nHDD:" + pc.MemoryHDD + "\nAudio card: " + pc.AudioCard);
-					break;
-
-				case "id":
-					Console.WriteLine("ID_" + pc.MotherboardMake + "_" + pc.ProcessorMake + "_" + pc.ProcessorFrequency);
-					break;
-
-				default:
-					Console.WriteLine("You did not choose a correct Display");
-					break;
-			}
-
+			pc.Display(format);
 		}
 	}
 }

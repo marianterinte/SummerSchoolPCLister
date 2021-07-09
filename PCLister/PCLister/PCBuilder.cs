@@ -21,6 +21,5 @@ namespace PCLister
 		protected abstract void SetupMemory();
 
 		protected abstract void SetupMotherboard();
-
 	}
 }
