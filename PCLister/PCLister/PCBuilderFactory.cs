@@ -8,10 +8,10 @@ namespace PCLister
 	{
 		Dictionary<string, PCBuilder> pcTypeBuilderMap = new Dictionary<string, PCBuilder>
 		{
-				{"budget", new HighEndPCBuilder() },
+				{"budget", new BudgetPCBuilder() },
 				{"basic", new BasicPCBuilder() },
 				{"performant", new PerformantPCBuilder() },
-				{"high-end", new BudgetPCBuilder() },
+				{"high-end", new HighEndPCBuilder() },
 		};
 
 		public PCBuilder Get(string pcType)

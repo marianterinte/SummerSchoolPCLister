@@ -14,10 +14,12 @@ namespace PCLister
 
 			var pcBuilderFactory = new PCBuilderFactory();
 			PCBuilder pcBuilder = pcBuilderFactory.Get(pcType);
-			 
+
 			pcBuilder.Build();
 			PC pc = pcBuilder.GetPC();
-			pc.Display(format);
+
+			PCFormatter pcFormatter = new PCFormatter();
+			pcFormatter.Display(pc, format);
 		}
 	}
 }

@@ -40,30 +40,6 @@ namespace PCLister
 		public string MemoryHDD { get => memoryHDD; set => memoryHDD = value; }
 		public string MotherBoardRamSlots { get => motherBoardRamSlots; set => motherBoardRamSlots = value; }
 		public string AudioCard { get => audioCard; set => audioCard = value; }
-
-
-		internal void Display(string format)
-		{
-			switch (format)
-			{
-				case "min":
-					Console.WriteLine("PC components:" + "\nMotherboard: " + MotherboardMake + "\nProcessor: " + ProcessorMake + "\nProcessor Freq: " + ProcessorFrequency + "\nRam Size: " + RamSize + "\nGraphic Card :" + GraphicCardModel + "\nHDD:" + MemoryHDD);
-					break;
-
-				case "full":
-
-				case "budget":
-					Console.WriteLine("PC components:" + "\nMotherboard: " + MotherboardMake + " " + MotherboardModel + " " + ", Ram slots " + MotherBoardRamSlots + ", USB Ports: " + MotherboardUsbPort + "\nProcessor: " + ProcessorMake + "" + ProcessorModel + "\nProcessor Freq: " + ProcessorFrequency + "\nProcessor cores: " + ProcessorCores + "\nRam: " + RamSize + " " + RamFrequency + "\nGraphic Card :" + GraphicCardMake + " " + GraphicCardModel + " " + GraphicCardSyze + " " + GraphicCardFrequency + "\nHDD:" + MemoryHDD + "\nAudio card: " + AudioCard);
-					break;
-
-				case "id":
-					Console.WriteLine("ID_" + MotherboardMake + "_" + ProcessorMake + "_" + ProcessorFrequency);
-					break;
-
-				default:
-					Console.WriteLine("You did not choose a correct Display");
-					break;
-			}
-		}
+		 
 	}
 }
