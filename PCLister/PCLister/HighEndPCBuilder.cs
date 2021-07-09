@@ -4,27 +4,45 @@ using System.Text;
 
 namespace PCLister
 {
-	public class HighEndPCBuilder : PCBuilder
-	{
-		public override void Build()
-		{
-			base.Build();
+    public class HighEndPCBuilder : PCBuilder
+    {
+        public override void Build()
+        {
+            base.Build();
+        }
 
-			pc.MotherboardMake = "Gigabyte";
-			pc.MotherboardModel = "X570 I AORUS PRO";
-			pc.MotherBoardRamSlots = "8";
-			pc.ProcessorMake = "AMD";
-			pc.ProcessorModel = "Ryzen 5950X";
-		}
+        protected override void SetupGpu()
+        {
+            pc.GraphicCardMake = "Nvidia";
+            pc.GraphicCardModel = "RTX 3060";
+            pc.GraphicCardSize = "12 GB";
+        }
 
-		protected override void SetupMemory()
-		{
-			throw new NotImplementedException();
-		}
+        protected override void SetupMemory()
+        {
+            pc.RamSize = "16GB";
+            pc.RamFrequency = "3000Mhz";
 
-		protected override void SetupMotherboard()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        }
+
+        protected override void SetupMotherboard()
+        {
+            pc.MotherboardMake = "AMD";
+            pc.MotherboardModel = "B550";
+            pc.MotherBoardRamSlots = "4";
+        }
+
+        protected override void SetupProcessor()
+        {
+            pc.ProcessorMake = "AMD";
+            pc.ProcessorModel = "3600";
+            pc.ProcessorFrequency = "3.6Ghz";
+            pc.ProcessorCores = "6";
+        }
+
+        protected override void SetupStorage()
+        {
+            pc.MemoryHDD = "1TB";
+        }
+    }
 }
