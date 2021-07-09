@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PCLister
 {
-	public class PerformantPCBuilder : PCBuilder
+	public class PerformantPCBuilder : BasePCBuilder
 	{
 		public override void Build()
 		{

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PCLister
 {
-	public class BasicPCBuilder : PCBuilder
+	public class BasicPCBuilder : BasePCBuilder
 	{
 		public BasicPCBuilder()
 		{

@@ -2,7 +2,7 @@
 
 namespace PCLister
 {
-	public abstract class PCBuilder
+	public abstract class BasePCBuilder
 	{
 		protected PC pc;
 		public PC GetPC()

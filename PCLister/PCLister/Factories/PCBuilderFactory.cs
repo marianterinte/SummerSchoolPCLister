@@ -6,7 +6,7 @@ namespace PCLister
 {
 	public class PCBuilderFactory
 	{
-		Dictionary<string, PCBuilder> pcTypeBuilderMap = new Dictionary<string, PCBuilder>
+		Dictionary<string, BasePCBuilder> pcTypeBuilderMap = new Dictionary<string, BasePCBuilder>
 		{
 				{"budget", new BudgetPCBuilder() },
 				{"basic", new BasicPCBuilder() },
@@ -14,7 +14,7 @@ namespace PCLister
 				{"high-end", new HighEndPCBuilder() },
 		};
 
-		public PCBuilder Get(string pcType)
+		public BasePCBuilder Get(string pcType)
 		{
 			if (pcTypeBuilderMap.ContainsKey(pcType))
 				return pcTypeBuilderMap[pcType];

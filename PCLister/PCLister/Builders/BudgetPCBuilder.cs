@@ -4,27 +4,25 @@ using System.Text;
 
 namespace PCLister
 {
-	public class HighEndPCBuilder : PCBuilder
+	public class BudgetPCBuilder : BasePCBuilder
 	{
 		public override void Build()
 		{
 			base.Build();
-
-			pc.MotherboardMake = "Gigabyte";
-			pc.MotherboardModel = "X570 I AORUS PRO";
-			pc.MotherBoardRamSlots = "8";
+			
+			pc.MotherboardMake = "ASRock";
+			pc.MotherboardModel = "B450 PRO4";
+			pc.MotherBoardRamSlots = "3";
 			pc.ProcessorMake = "AMD";
-			pc.ProcessorModel = "Ryzen 5950X";
+			pc.ProcessorModel = "Ryzen 3 2200g";
 		}
 
 		protected override void SetupMemory()
 		{
-			throw new NotImplementedException();
 		}
 
 		protected override void SetupMotherboard()
 		{
-			throw new NotImplementedException();
 		}
 	}
 }
