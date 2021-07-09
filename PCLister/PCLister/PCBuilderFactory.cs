@@ -6,30 +6,20 @@ namespace PCLister
 {
 	public class PCBuilderFactory
 	{
+		Dictionary<string, PCBuilder> pcTypeBuilderMap = new Dictionary<string, PCBuilder>
+		{
+				{"budget", new HighEndPCBuilder() },
+				{"basic", new BasicPCBuilder() },
+				{"performant", new PerformantPCBuilder() },
+				{"high-end", new BudgetPCBuilder() },
+		};
+
 		public PCBuilder Get(string pcType)
 		{
-			switch (pcType)
-			{
-				case "basic":
-					{
-						return new BasicPCBuilder();
-					}
+			if (pcTypeBuilderMap.ContainsKey(pcType))
+				return pcTypeBuilderMap[pcType];
 
-				case "performant":
-					{
-						return new PerformantPCBuilder();
-					}
-
-				case "high-end":
-					{
-						return new HighEndPCBuilder();
-					}
-
-				default:
-					{
-						return new BudgetPCBuilder();
-					}
-			}
+			throw new Exception("PC Type not found!");
 		}
 	}
 }
